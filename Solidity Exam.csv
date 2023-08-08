@@ -1,0 +1,148 @@
+Exam 1: Solidity Basics,,,,,,
+,,,,,,
+Exam Questions,a,b,c,d,Correct Answer,Explanation
+Q1: What is Solidity?,A JavaScript framework,A programming language,A database management system,A version control system,b,Solidity is a programming language used for writing smart contracts on the Ethereum blockchain.
+Q2: Which data type is used to store an Ethereum address?,uint,bool,address,bytes32,c,"The ""address"" data type is used to store Ethereum addresses, typically 20 bytes in length."
+"Q3: What does the ""view"" keyword indicate in a function?",It modifies the contract,It returns a value,It requires Ether,It is not part of Solidity,b,"The ""view"" keyword indicates that the function is read-only and does not modify the contract's state."
+Q4: How do you declare a fixed-size array of 5 integers?,int[5],int[],int[5][],int[] 5,a,"To declare a fixed-size array of 5 integers, you use the syntax ""int[5]""."
+Q5: Which keyword is used to define a contract constructor?,this,init,constructor,new,c,"The ""constructor"" keyword is used to define the constructor function of a contract."
+"Q6: What is the purpose of the ""fallback"" function?",It is a required function,It is called when a,It is used to receive,It is executed when,c,"The ""fallback"" function is executed when a contract receives a transaction without matching any function."
+"Q7: In Solidity, what is a modifier?",A keyword for comments,A function for,A reusable piece of code,A type of data structure,c,A modifier in Solidity is a reusable piece of code that can be applied to multiple functions.
+Q8: What is the visibility level of a public function?,It can be accessed by,It can be accessed by,It can only be accessed by,It can be accessed by,a,A public function can be accessed both from within the contract and externally by other contracts.
+Q9: How do you access the sender of a contract call?,address(this),msg.sender,this.address,address,b,"""msg.sender"" provides the address of the sender of the current contract call."
+"Q10: What is the purpose of the ""payable"" keyword?",It allows the contract,It indicates that the,It marks the contract,It specifies that the,b,"The ""payable"" keyword allows a function to receive Ether as part of a transaction."
+,,,,,,
+Exam 2: Smart Contract Interaction,,,,,,
+,,,,,,
+Exam Questions,a,b,c,d,Correct Answer,Explanation
+Q1: How do you create a new instance of a contract?,new MyContract(),create MyContract,MyContract(),deploy MyContract(),a,"To create a new instance of a contract, you need to create a new instance of it using the ""new"" keyword followed by the contract name."
+"Q2: What does the ""onlyOwner"" modifier typically implement?",A function to transfer,A function to restrict,A function to verify,A function to destroy,b,"The ""onlyOwner"" modifier is typically used to restrict certain functions to be executed only by the contract owner."
+Q3: What are events used for in Solidity?,To store large data,To perform arithmetic,To communicate with,To transfer Ether,c,Events in Solidity are used to communicate and log important information on the blockchain for external listeners.
+Q4: What is the visibility of an external function?,It can be accessed from,It can be accessed by,It can only be accessed by,It can be accessed by,a,An external function can be accessed from outside the contract and other contracts.
+Q5: What is a common use of contract inheritance in Solidity?,To add functions to a,To implement polymorphism,To create new data types,To extend the functionality,b,Contract inheritance in Solidity is commonly used to implement polymorphism and share common functionality.
+"Q6: What is the purpose of the ""override"" keyword in Solidity?",To create a new function,To modify an existing function,To extend a base function,To override a base function,d,"The ""override"" keyword is used to indicate that a function is intentionally overriding a function from the base contract."
+"Q7: What is the purpose of the ""payable"" keyword?",It allows the contract,It indicates that the,It marks the contract,It specifies that the,b,"The ""payable"" keyword allows a function to receive Ether as part of a transaction."
+"Q8: What does the ""fallback"" function typically do?",It handles unexpected,It reverts the transaction,It performs some computation,It transfers Ether,a,"The ""fallback"" function is executed when a contract receives a transaction without matching any function."
+Q9: How do you access the contract balance in Solidity?,contract.balance,this.balance,address.balance,balance,b,"The ""this.balance"" expression returns the current balance of the contract in Wei."
+"Q10: What is the purpose of the ""assert"" statement in Solidity?",It stops the execution,It reverts the transaction,It checks for the sender's,It ensures data integrity,a,"The ""assert"" statement"
+,,,,,,
+,,,,,,
+,,,,,,
+Exam 3: Error Handling and Security,,,,,,
+Exam Questions,a,b,c,d,Correct Answer,Explanation
+"Q1: What does the ""require"" function do in Solidity?",It ensures the contract,It checks for the contract,It checks for the sender's,It checks for the function's,a,"The ""require"" function is used to validate conditions and revert the transaction if the condition is not met."
+"Q2: What is a common use of the ""onlyOwner"" modifier?",To restrict access to a,To prevent data overflow,To verify the transaction,To add security to a,a,"The ""onlyOwner"" modifier is commonly used to restrict access to specific functions so that only the contract owner can use them."
+"Q3: What is the purpose of the ""gas"" parameter in a function?",It limits the amount of,It specifies the gas cost,It measures the gas used,It allows a function to,a,"The ""gas"" parameter in a function specifies the maximum amount of gas that can be used to execute the function."
+"Q4: What is the purpose of the ""selfdestruct"" function?",It allows a contract to,It destroys the contract,It transfers Ether to,It transfers control to,b,"The ""selfdestruct"" function is used to destroy a contract and return any remaining Ether to a designated recipient."
+Q5: How can you prevent re-entrancy attacks in Solidity?,"By using the ""override""","By using the ""throw""","By using the ""require""","By using the ""modifier""",c,"Re-entrancy attacks can be prevented by using the ""require"" statement to check conditions before making external calls."
+"Q6: What does the ""view"" modifier indicate in a function?",It modifies the contract,It returns a value,It requires Ether,It is not part of Solidity,b,"The ""view"" modifier indicates that the function is read-only and does not modify the contract's state."
+"Q7: What is the purpose of the ""pure"" modifier in Solidity?",It modifies the contract,It returns a value,It requires Ether,It restricts function,b,"The ""pure"" modifier indicates that the function is read-only and does not access the contract's state or storage."
+Q8: What is a common vulnerability in Solidity smart contracts?,Data exposure,Overflow and underflow,Gas exhaustion,Data fragmentation,b,Overflow and underflow vulnerabilities can occur when arithmetic operations result in values outside the data type's range.
+"Q9: What does the ""msg.value"" variable contain in Solidity?",The amount of Ether sent,The contract address,The gas used in the,The sender's address,a,"The ""msg.value"" variable contains the amount of Ether sent with the current transaction."
+"Q10: What is the purpose of the ""assert"" statement in Solidity?",It stops the execution,It reverts the transaction,It checks for the sender's,It ensures data integrity,a,"The ""assert"" statement is used to check for conditions that should always be true. If the condition is false, the execution is halted."
+,,,,,,
+Exam 4: Contract Deployment and Events,,,,,,
+,,,,,,
+Exam Questions,a,b,c,d,Correct Answer,Explanation
+Q1: How do you deploy a contract on the Ethereum blockchain?,Compile and run the contract,Send Ether to a contract's,Deploy the contract using,Call the constructor function,c,"To deploy a contract, you need to create a new instance of it using the ""new"" keyword followed by the contract name."
+Q2: What does an Ethereum event allow a contract to do?,Emit Ether to the contract,Communicate with external,Modify the contract's state,Send Ether from the contract,b,An Ethereum event allows a contract to communicate with external listeners and log important information on the blockchain.
+"Q3: What is the purpose of the ""indexed"" keyword in an event?",It ensures the event is,It optimizes the event's,It restricts the event to,It allows multiple events,b,"The ""indexed"" keyword is used to optimize searching for specific events when filtering logs on the Ethereum blockchain."
+Q4: What is the visibility of a contract constructor?,It is private,It is public,It is internal,It is external,c,"The contract constructor is ""internal"" by default, meaning it can be called from within the contract and derived contracts."
+Q5: How do you specify indexed parameters in an event?,By adding them to the event,"By marking them as ""indexed""",By calling the event with,By specifying them in the,b,"Indexed parameters in an event are marked as ""indexed"" to enable efficient searching for specific event occurrences."
+"Q6: What is the main difference between ""internal"" and ""external"" functions in Solidity?",Internal functions can be,External functions can be,Internal functions can only,External functions can be,a,"The main difference is that ""internal"" functions can only be accessed from within the contract, while ""external"" functions can be called externally."
+Q7: Which modifier is often used for functions that can receive Ether?,view,pure,payable,address(this),c,"The ""payable"" modifier allows a function to receive Ether as part of a transaction."
+Q8: What is the result of dividing two integers in Solidity?,An integer,A floating-point number,A rational number,An unsigned integer,a,"When dividing two integers in Solidity, the result is truncated to an integer."
+"Q9: What does the ""default"" function in a contract do?",It is called when a,It reverts the transaction,It performs some computation,It transfers Ether,a,"The ""default"" function is executed when a contract receives a transaction without matching any function."
+"Q10: What is the purpose of the ""assert"" statement in Solidity?",It stops the execution,It reverts the transaction,It checks for the sender's,It ensures data integrity,a,"The ""assert"" statement is used to check for conditions that should always be true. If the condition is false, the execution is halted."
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+Exam 5: Mapping and Structs,,,,,,
+,,,,,,
+Exam Questions,a,b,c,d,Correct Answer,Explanation
+Q1: What is a mapping in Solidity?,A data structure,A mathematical function,A transaction on the,An Ethereum account address,a,A mapping in Solidity is a data structure that associates unique keys with corresponding values.
+Q2: How do you define a new struct in Solidity?,struct NewStruct {},struct NewStruct,struct NewStruct(),struct NewStruct[],b,"To define a new struct in Solidity, you use the ""struct"" keyword followed by the struct name and the struct members."
+Q3: How do you access a specific value in a mapping?,Using a loop,By calling the mapping key,"By using the ""view"" keyword",By passing the mapping,b,You access a specific value in a mapping by providing the mapping's key as an index in the mapping variable.
+Q4: What is the primary benefit of using a struct in Solidity?,Code reusability,Data encapsulation,Enhanced security,Gas cost reduction,b,"The primary benefit of using a struct is data encapsulation, as it allows you to group related data together for better readability and maintainability."
+Q5: Which keyword is used to create an instance of a struct?,new,create,MyStruct(),instanceOfStruct(),c,"To create an instance of a struct, you use the struct's name followed by parentheses."
+Q6: How do you initialize a mapping in Solidity?,mappings can't be,mappings should be,mappings have a default,mappings must be,c,"Mappings in Solidity have a default value. When you access a non-existing key, it returns the default value for that data type."
+"Q7: What is the purpose of the ""delete"" keyword in Solidity?",It is used to destroy a,It is used to remove data,It is used to free up,It is used to set variables,b,"The ""delete"" keyword is used to remove data from mappings and structs, setting the value to its default value (for example, 0)."
+Q8: How do you specify an array of structs in Solidity?,MyStruct[],struct[],NewStruct[],new MyStruct[],a,"To specify an array of structs in Solidity, you use the syntax ""MyStruct[]""."
+Q9: What is the size of a dynamically-sized array in Solidity?,It is fixed,It is unknown,It is defined at runtime,It is set to 0,b,The size of a dynamically-sized array is unknown at compile time and is determined at runtime based on the number of elements.
+Q10: What is a common use of a mapping in Solidity?,To store multiple values for,To retrieve Ether balances,To create new data types,To add security to a,a,"A common use of a mapping is to store multiple values associated with unique keys, like storing data for multiple users or addresses."
+,,,,,,
+Exam 6: Inheritance and Modifiers,,,,,,
+,,,,,,
+Exam Questions,a,b,c,d,Correct Answer,Explanation
+Q1: What is contract inheritance in Solidity?,A contract inheriting from,A contract being referenced,A contract calling a,A contract deployed on,a,Contract inheritance in Solidity allows a contract (child contract) to inherit the functionalities of another contract (parent contract).
+Q2: How do you specify a contract to inherit from another?,contract NewContract is,contract NewContract,contract NewContract(),contract NewContract{},a,"To specify a contract to inherit from another, you use the ""is"" keyword followed by the name of the parent contract."
+Q3: What is a modifier in Solidity?,A contract for,A type of data structure,A reusable piece of code,A keyword used for loops,c,A modifier in Solidity is a reusable piece of code that can be applied to multiple functions to modify their behavior.
+Q4: How do you use a modifier in a function?,modifierName(),use modifier modifierName,modifierName; function,function; modifierName;,d,You use the modifier by placing its name before the function definition. The modifier's code will be executed before the function.
+"Q5: What is the purpose of the ""abstract"" keyword in Solidity?",To create abstract,To indicate that a contract,To hide the implementation,To make a contract abstract,b,"The ""abstract"" keyword is used to indicate that a contract is an abstract contract, which cannot be instantiated directly."
+"Q6: What does the ""internal"" visibility mean in a contract?",It restricts access to,It allows access from,It makes the function private,It makes the function public,b,"The ""internal"" visibility allows functions to be accessed from other contracts that inherit from the current contract."
+Q7: What is a common use of a modifier in Solidity?,To deploy contracts,To manage contract ownership,To handle unexpected events,To handle user input errors,b,A common use of a modifier in Solidity is to manage contract ownership and restrict certain functions to the contract owner.
+"Q8: What is the result of the ""super"" keyword in a function?",It refers to the parent,It returns a value,It refers to the contract,It refers to the derived,a,"The ""super"" keyword is used to access functions or state variables in the parent contract when using contract inheritance."
+"Q9: What does the ""external"" visibility mean in a contract?",It restricts access to,It allows access from,It makes the function private,It makes the function public,a,"The ""external"" visibility means that functions can be called from outside the contract and not from within the contract itself."
+Q10: How do you prevent a contract from being directly deployed?,"Use the ""abstract"" keyword","Use the ""preventDeploy""","Use the ""disableDeploy""","Use the ""modifier"" keyword",a,"You prevent a contract from being directly deployed by marking it as ""abstract"", making it an abstract contract."
+,,,,,,
+Exam 7: State Variables and Control Structures,,,,,,
+,,,,,,
+Exam Questions,a,b,c,d,Correct Answer,Explanation
+Q1: What is a state variable in Solidity?,A variable used to store,A variable used to check,A variable used for,A variable used to,a,A state variable in Solidity is a variable declared outside any function and is permanently stored on the blockchain.
+Q2: How do you define a state variable in Solidity?,function myVariable(),myVariable: uint,var myVariable;,uint myVariable;,d,"To define a state variable in Solidity, you specify the variable's type (e.g., ""uint"") followed by the variable's name."
+"Q3: What is the purpose of the ""memory"" keyword in Solidity?",It specifies that a variable,It indicates that a,It declares a temporary,It allocates memory for,c,"The ""memory"" keyword in Solidity is used to declare a temporary location where function arguments and local variables are stored."
+"Q4: What is the purpose of the ""storage"" keyword in Solidity?",It specifies that a variable,It indicates that a,It declares a permanent,It allocates storage for,b,"The ""storage"" keyword in Solidity is used to indicate that a variable should be stored permanently on the blockchain."
+"Q5: What does the ""if"" statement do in Solidity?",It executes a block of code,It defines a new variable,It assigns a value to,It iterates over a set of,a,"The ""if"" statement in Solidity is used to execute a block of code if a certain condition is true."
+"Q6: How do you use the ""else"" statement in Solidity?",else {,otherwise {,if () {,then {,a,"The ""else"" statement in Solidity is used to define an alternative block of code to be executed if the ""if"" condition is false."
+"Q7: What is the purpose of the ""while"" loop in Solidity?",It allows you to iterate,It checks a condition,It defines a variable,It performs a single task,a,"The ""while"" loop in Solidity allows you to repeatedly execute a block of code as long as a specified condition is true."
+"Q8: What is a common use of the ""for"" loop in Solidity?",To define variables,To perform arithmetic,To define functions,To iterate over an array,d,"A common use of the ""for"" loop in Solidity is to iterate over an array or perform a set of actions a specific number of times."
+Q9: How do you exit a loop prematurely in Solidity?,break;,exit;,stop;,continue;,a,"You exit a loop prematurely in Solidity by using the ""break"" statement, which immediately terminates the loop's execution."
+"Q10: What does the ""return"" statement do in Solidity?",It ends the execution of the,It marks the end of a,It returns a value from,It restarts the execution,c,"The ""return"" statement in Solidity is used to return a value from a function and ends the function's execution."
+,,,,,,
+Exam 8: Functions and Function Modifiers,,,,,,
+,,,,,,
+Exam Questions,a,b,c,d,Correct Answer,Explanation
+Q1: How do you define a function in Solidity?,function myFunction(),def myFunction(),myFunction(),func myFunction(),a,"To define a function in Solidity, you use the ""function"" keyword followed by the function name and any parameters and return types."
+Q2: What is a function signature in Solidity?,The hash of the function,The unique identifier of the,The public key of the,The Ethereum address of the,a,The function signature in Solidity is the hash of the function's name and its parameter types.
+"Q3: What does the ""public"" visibility mean in a function?",It restricts access to,It allows access from,It makes the function private,It makes the function public,b,"The ""public"" visibility means that functions can be called from outside the contract and within the contract itself."
+Q4: How do you pass arguments to a function in Solidity?,myFunction(arguments),function arguments myFunction,myFunction(arguments;),myFunction(arguments),d,You pass arguments to a function in Solidity by providing them inside parentheses when calling the function.
+"Q5: What is the purpose of the ""view"" modifier in a function?",It modifies the contract,It returns a value,It requires Ether,It is not part of Solidity,b,"The ""view"" modifier indicates that the function is read-only and does not modify the contract's state."
+Q6: How do you use a function modifier in Solidity?,function modifierName(),use modifier modifierName,modifierName; function,function; modifierName;,c,"You use a function modifier by placing its name before the function definition, separated by the ""modifier"" keyword."
+Q7: What is a common use of a function modifier in Solidity?,To deploy contracts,To restrict access to,To handle unexpected events,To handle user input errors,b,A common use of a function modifier in Solidity is to restrict access to certain functions based on specified conditions.
+"Q8: What is the purpose of the ""override"" keyword in Solidity?",To create a new function,To modify an existing function,To extend a base function,To override a base function,d,"The ""override"" keyword is used to indicate that a function is intentionally overriding a function from the base contract."
+Q9: How do you define a function with multiple return values in Solidity?,function myFunction(),function myFunction(),function myFunction(),function myFunction(),b,"To define a function with multiple return values in Solidity, you specify the return types separated by commas after the function name."
+"Q10: What does the ""payable"" keyword indicate in a function?",It modifies the contract,It marks the function as,It allows Ether to be sent,It restricts Ether transfers,c,"The ""payable"" keyword in a function indicates that the function is capable of receiving and handling Ether transfers."
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+Exam 9: Events and Error Handling,,,,,,
+,,,,,,
+Exam Questions,a,b,c,d,Correct Answer,Explanation
+Q1: What is an event in Solidity used for?,To store large data,To perform arithmetic,To communicate with external,To transfer Ether,c,Events in Solidity are used to communicate and log important information on the blockchain for external listeners.
+Q2: How do you define an event in Solidity?,log MyEvent,event MyEvent,emit MyEvent,create MyEvent,b,"To define an event in Solidity, you use the ""event"" keyword followed by the event name and its parameters (if any)."
+"Q3: What is the purpose of the ""indexed"" keyword in an event?",It ensures the event is,It optimizes the event's,It restricts the event to,It allows multiple events,b,"The ""indexed"" keyword is used to optimize searching for specific events when filtering logs on the Ethereum blockchain."
+Q4: How do you emit an event in a Solidity function?,emit MyEvent(),log MyEvent(),emit(EventName)(),MyEvent(),a,"You emit an event in a Solidity function by using the ""emit"" keyword followed by the event name and any parameters (if any)."
+"Q5: What is the purpose of the ""revert"" function in Solidity?",It stops the execution of a,It returns a value,It checks for the sender's,It ensures data integrity,a,"The ""revert"" function is used to stop the execution of a function and revert any changes made if a condition is not met."
+Q6: What is a common use of events in Solidity?,To define the contract,To perform arithmetic,To log important transactions,To add security to the,c,A common use of events in Solidity is to log important transactions and events on the blockchain for external monitoring.
+"Q7: What is the purpose of the ""require"" function in Solidity?",It ensures the contract,It checks for the contract,It checks for the sender's,It checks for the function's,a,"The ""require"" function is used to validate conditions and revert the transaction if the condition is not met."
+Q8: How do you handle errors in Solidity functions?,"By using the ""error"" keyword","By using the ""throw"" keyword","By using the ""assert""","By using the ""require""",d,"Errors in Solidity functions are typically handled using the ""require"" statement, which checks for conditions and reverts if necessary."
+"Q9: What does the ""fallback"" function typically do?",It handles unexpected,It reverts the transaction,It performs some computation,It transfers Ether,a,"The ""fallback"" function is executed when a contract receives a transaction without matching any function."
+"Q10: What is the purpose of the ""assert"" statement in Solidity?",It stops the execution,It reverts the transaction,It checks for the sender's,It ensures data integrity,a,"The ""assert"" statement is used to check for conditions that should always be true. If the condition is false, the execution is halted."
+,,,,,,
+Exam 10: Solidity Modifiers and Best Practices,,,,,,
+,,,,,,
+Exam Questions,a,b,c,d,Correct Answer,Explanation
+Q1: What is a modifier in Solidity?,A contract for,A type of data structure,A reusable piece of code,A keyword used for loops,c,A modifier in Solidity is a reusable piece of code that can be applied to multiple functions to modify their behavior.
+Q2: How do you use a modifier in a function?,function modifierName(),use modifier modifierName,modifierName; function,function; modifierName;,c,"You use a modifier by placing its name before the function definition, separated by the ""modifier"" keyword."
+"Q3: What is the purpose of the ""onlyOwner"" modifier in Solidity?",To restrict access to a,To prevent data overflow,To verify the transaction,To add security to a,a,"The ""onlyOwner"" modifier is commonly used to restrict access to specific functions so that only the contract owner can use them."
+Q4: How do you define a custom modifier in Solidity?,modifier modifierName(),custom modifier modifierName,function modifierName(),modifierName(),a,"To define a custom modifier in Solidity, you use the ""modifier"" keyword followed by the modifier's name and any conditions or checks."
+"Q5: What is the purpose of the ""view"" modifier in a function?",It modifies the contract,It returns a value,It requires Ether,It is not part of Solidity,b,"The ""view"" modifier indicates that the function is read-only and does not modify the contract's state."
+"Q6: What does the ""pure"" modifier indicate in a function?",It modifies the contract,It returns a value,It requires Ether,It restricts function,b,"The ""pure"" modifier indicates that the function is read-only and does not access the contract's state or storage."
+"Q7: What is a common use of the ""onlyOwner"" modifier in Solidity?",To deploy contracts,To restrict access to,To handle unexpected events,To handle user input errors,b,"A common use of the ""onlyOwner"" modifier is to restrict access to specific functions so that only the contract owner can execute them."
+Q8: How do you prevent a contract function from modifying the state?,"Use the ""stateless""","Use the ""view"" modifier","Use the ""pure"" modifier","Use the ""restrictState""",c,"You prevent a contract function from modifying the state by using the ""pure"" modifier, indicating that it is a read-only function."
+"Q9: What is the purpose of the ""fallback"" function in Solidity?",It allows a contract to,It destroys the contract,It transfers Ether to,It transfers control to,c,"The ""fallback"" function is used to receive Ether and execute custom logic when a contract receives a transaction without matching any function."
+Q10: What is a best practice for handling Ether in Solidity?,"Avoid using the ""payable""","Always use the ""transfer""","Use the ""fallback"" function","Use the ""assert"" statement",b,"A best practice for handling Ether in Solidity is to use the ""transfer"" method when sending Ether to external addresses to avoid potential re-entrancy attacks."
